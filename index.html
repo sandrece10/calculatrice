@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculatrice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div class="container">  
+    <input type="text" class="result"  value="0"readonly>
+
+    <div>
+        <button type="button" class="clear">C</button>
+        <button type="button" class="back"><</button>
+    </div>
+
+
+    <div>
+        <button type="button" class="calc-btn">7</button>
+        <button type="button" class="calc-btn">8</button>
+        <button type="button" class="calc-btn">9</button>
+        <button type="button" class="calc-btn">*</button>
+    </div>
+
+
+    <div>
+        <button type="button" class="calc-btn">4</button>
+        <button type="button" class="calc-btn">5</button>
+        <button type="button" class="calc-btn">6</button>
+        <button type="button" class="calc-btn">-</button>
+    </div>
+
+
+    <div>
+        <button type="button" class="calc-btn">1</button>
+        <button type="button" class="calc-btn">2</button>
+        <button type="button" class="calc-btn">3</button>
+        <button type="button" class="calc-btn">+</button>
+    </div>
+
+
+    <div>
+        <button type="button" class="calc-btn">0</button>
+        <button type="button" class="calc-btn">.</button>
+        <button type="button" class="calc-btn">/</button>
+        <button type="button" class="equal">=</button>
+    </div>
+ </div>  
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script type="text/javascript">
+    $(function(){
+        $('.calc-btn').on('click',function(){
+            $('.result').val( $('.result').val()+ $(this).html());
+    
+        })
+        $('.equal').on('click',function(){
+            exp= $ ('.result').val();
+            if(exp.includes('x') ){
+                exp = exp.replace('x','*');
+            }  
+            $('.result').val(eval(exp) );    
+         })
+    
+         $('.clear').on('click',function(){
+            $('.result').val('');
+        })
+    
+        $('.back').on('click',function(){
+            exp = $('.result').val('');
+            $('.result').val( ex.substring(0,ex.length -1));
+        })
+    
+    
+    })
+    
+   </script>
+
+</body>
+</html>

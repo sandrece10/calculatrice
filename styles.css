@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #052f55;
+
+}
+       
+button{
+    width: 50px;
+    height:50px;
+    outline: none;
+    box-shadow: none;
+    margin: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 15px;
+    background-position: linear gradient(to right, #ccc,#fff);
+    
+
+}
+.clear,.back{
+    width: 65px;
+}
+.result{
+    width: 90%;
+    height: 40px;
+    margin: 10px;
+    background:#99b0bd ;
+    text-align: right;
+    padding: 6px;
+    border-radius: 10px;
+    box-shadow: none;
+    font-weight: bold;
+    font-family: tahoma;
+
+
+}
+.container{
+    width: 100%;
+    position: absolute;
+    max-width: 260px;
+    width: 100%;
+    border-radius: 12px;
+    padding: 10px 20px 20px;
+    background-color: rgb(3, 11, 70);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    text-align:center;
+    height:360px ;
+    overflow: hidden ;
+
+}
+
+
+.display{
+    height: 80px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 25px;
+    outline: none;
+    border: none;
+    text-align: right;
+    color: #097bdf;
+    pointer-events: none;
+}
+
+.buttons{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4 ,1fr);
+
+}
+.buttons button{
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #edf1ee;
+
+}
+.buttons button :active{
+    transform: scale(0.99);
+
+}
+.operator{
+    color: #49a6f8;
+}
